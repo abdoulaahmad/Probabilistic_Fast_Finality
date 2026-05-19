@@ -1,0 +1,6 @@
+pff-sidecar
+*.exe
+cluster_config.json
+results.csv
+figures/
+__pycache__/
