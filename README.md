@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚡ Probabilistic Fast Finality (PFF)
+#  Probabilistic Fast Finality (PFF)
 
 **A Go implementation of a finality gadget that reduces BFT consensus latency by up to ~46% in the common case**
 by adding an optimistic fast path on top of standard BFT protocols.
@@ -10,13 +10,13 @@ by adding an optimistic fast path on top of standard BFT protocols.
 [![Status](https://img.shields.io/badge/Status-Active%20Research-orange?style=flat)]()
 [![Protocol](https://img.shields.io/badge/Protocol-Ed25519%20%7C%20BFT-blueviolet?style=flat)]()
 
-> 📄 Companion to: [Probabilistic Fast Finality: Reducing BFT Latency by Up to 46% in the Common Case](https://medium.com/@abdullahiabbaahmad39/probabilistic-fast-finality-reducing-bft-latency-by-up-to-46-in-the-common-case-04895ded843a)
+>  Companion to: [Probabilistic Fast Finality: Reducing BFT Latency by Up to 46% in the Common Case](https://medium.com/@abdullahiabbaahmad39/probabilistic-fast-finality-reducing-bft-latency-by-up-to-46-in-the-common-case-04895ded843a)
 
 </div>
 
 ---
 
-## 🔑 The Core Idea
+##  The Core Idea
 
 Standard BFT protocols (e.g., HotStuff) require **three consecutive voting rounds** per block, even when the network is perfectly healthy. PFF adds a **fast path** that short-circuits this when strong evidence of agreement is observed:
 
@@ -42,7 +42,7 @@ Standard BFT protocols (e.g., HotStuff) require **three consecutive voting round
 
 ---
 
-## 📊 Results
+##  Results
 
 > Measured across **500 consensus rounds** on **5 live VPS nodes** over real WAN links.
 
@@ -57,7 +57,7 @@ Standard BFT protocols (e.g., HotStuff) require **three consecutive voting round
 | **Improvement** | **~46% faster** | Common case |
 
 <details>
-<summary>📈 Detailed Test Results — Latency Proof & Threshold Sweet Spot</summary>
+<summary> Detailed Test Results — Latency Proof & Threshold Sweet Spot</summary>
 
 <br>
 
@@ -72,7 +72,7 @@ As the confidence threshold `k` increases from 0.70 → 0.95, latency rises grad
 </details>
 
 <details>
-<summary>📈 Detailed Test Results — Throughput Scaling & Safety Heatmap</summary>
+<summary> Detailed Test Results — Throughput Scaling & Safety Heatmap</summary>
 
 <br>
 
@@ -88,7 +88,7 @@ Latency remains flat (182–186 ms) from 100 TPS up to ~50,000 TPS, demonstratin
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 <details>
 <summary>View file structure & component roles</summary>
@@ -121,7 +121,7 @@ No external Go dependencies — pure stdlib.
 
 ---
 
-## ⚙️ Protocol Constants
+##  Protocol Constants
 
 <details>
 <summary>View configurable protocol parameters</summary>
@@ -141,7 +141,7 @@ Defined in `config.go`, overridable via `cluster_config.json`:
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -158,7 +158,7 @@ go run . -mode=keygen
 Writes `cluster_config.json` with Ed25519 keypairs for all 5 nodes.
 Edit the hardcoded IPs in `config.go` → `RunKeygen()` to match your VPS public IPs first.
 
-> ⚠️ Distribute `cluster_config.json` to all nodes — **never commit it, it contains private keys.**
+>  Distribute `cluster_config.json` to all nodes — **never commit it, it contains private keys.**
 
 ### 2. Build the binary
 
@@ -189,7 +189,7 @@ The coordinator waits for all 4 validators to register, then runs the specified 
 
 ---
 
-## 🎛️ CLI Reference
+##  CLI Reference
 
 <details>
 <summary>View all flags</summary>
@@ -208,7 +208,7 @@ The coordinator waits for all 4 validators to register, then runs the specified 
 
 ---
 
-## 🔥 Chaos Engineering Suites
+##  Chaos Engineering Suites
 
 <details>
 <summary>View test suite configurations</summary>
@@ -227,7 +227,7 @@ Three suites reproduce experimental conditions for evaluating PFF under adversar
 
 ---
 
-## 📈 Analyzing Results
+##  Analyzing Results
 
 After downloading `results.csv` from the coordinator node:
 
@@ -257,7 +257,7 @@ Outputs to `figures/`:
 
 ---
 
-## 🔒 Security Notes
+##  Security Notes
 
 - `cluster_config.json` contains **Ed25519 private keys** for all nodes — never commit it (already in `.gitignore`)
 - The coordinator **verifies every validator signature** before counting a vote
@@ -266,7 +266,7 @@ Outputs to `figures/`:
 
 ---
 
-## 🔬 Research Status
+##  Research Status
 
 > This project spans both a **working prototype** and an **ongoing research agenda**. The Go implementation and latency results are real and reproducible. The following areas remain under active investigation:
 
@@ -283,7 +283,7 @@ Performance numbers (~177 ms / ~331 ms) reflect measurements on the current Go i
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 This is an active research project. If you have ideas, questions, or find issues:
 
@@ -295,7 +295,7 @@ This is an active research project. If you have ideas, questions, or find issues
 
 <div align="center">
 
-Made with ⚡ by [@abdoulaahmad](https://github.com/abdoulaahmad)
+Made with  by [@abdoulaahmad](https://github.com/abdoulaahmad)
 
 </div>
 
