@@ -26,3 +26,8 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
+
+# Dev / internal docs (not for public repo)
+CHAOS_AND_DEPLOYMENT.md
+CLAUDE-CODE-CLI.bat
+PFF_GO_CODEBASE_GUIDE.md
