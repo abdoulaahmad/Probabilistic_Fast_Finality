@@ -1,6 +1,28 @@
+# Build outputs
 pff-sidecar
 *.exe
+*.out
+
+# Sensitive config (contains Ed25519 private keys — never commit)
 cluster_config.json
+
+# Experiment output
 results.csv
 figures/
+
+# Python
 __pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
