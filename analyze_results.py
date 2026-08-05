@@ -29,7 +29,10 @@ def analyze_and_plot(csv_file='results.csv'):
     
     if len(df_noise) > 0:
         plt.figure(figsize=(8, 6))
-        ax = sns.boxplot(x='TestSuite', y='LatencyMS', data=df_noise, palette="Set2")
+        # hue= is required alongside palette= in seaborn >= 0.14; legend is
+        # redundant here since the x-axis already labels each suite.
+        ax = sns.boxplot(x='TestSuite', y='LatencyMS', hue='TestSuite',
+                         data=df_noise, palette="Set2", legend=False)
         sns.stripplot(x='TestSuite', y='LatencyMS', data=df_noise, color=".25", alpha=0.5, size=3)
         
         plt.title('PFF Latency Distribution: Baseline vs Network Jitter (Suite C.1)', fontsize=14, weight='bold')
@@ -60,8 +63,10 @@ def analyze_and_plot(csv_file='results.csv'):
         sns.scatterplot(x='RoundID', y='LatencyMS', hue='PathTaken', palette=colors, 
                         data=df_resumption, s=40, zorder=2, edgecolor='black', linewidth=0.5)
         
-        plt.axhline(y=177, color='green', linestyle='--', alpha=0.5, label='PFF Target (~177ms)')
-        plt.axhline(y=331, color='red', linestyle='--', alpha=0.5, label='BFT Baseline (~331ms)')
+        # Reference lines from the originally published run. These are fixed
+        # annotations, not values derived from the CSV being plotted.
+        plt.axhline(y=177, color='green', linestyle='--', alpha=0.5, label='PFF reference (~177ms)')
+        plt.axhline(y=331, color='red', linestyle='--', alpha=0.5, label='BFT reference (~331ms)')
         
         plt.title('Protocol Resumption & Heal Speed (Suite C.3)', fontsize=14, weight='bold')
         plt.ylabel('Latency (ms)', fontsize=12)
