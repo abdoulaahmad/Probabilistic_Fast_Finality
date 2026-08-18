@@ -12,7 +12,7 @@
 
 > 🔬 **Research in Development:** This protocol specification, analytical modeling, and distributed prototype are under active research and development.
 >
-> 📖 **Companion Publication:** [Probabilistic Fast Finality: Reducing BFT Latency by Up to 46% in the Common Case](https://medium.com/@abdullahiabbaahmad39/probabilistic-fast-finality-reducing-bft-latency-by-up-to-46-in-the-common-case-04895ded843a)
+> 📖 **Medium Post About Research:** [Probabilistic Fast Finality: Reducing BFT Latency by Up to 46% in the Common Case](https://medium.com/@abdullahiabbaahmad39/probabilistic-fast-finality-reducing-bft-latency-by-up-to-46-in-the-common-case-04895ded843a)
 
 </div>
 
