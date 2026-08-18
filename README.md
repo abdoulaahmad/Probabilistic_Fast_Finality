@@ -5,12 +5,14 @@
 **A high-performance consensus middleware and research harness exploring optimistic, single-round fast-path finality for BFT consensus networks.**
 
 [![Go](https://img.shields.io/badge/Go-1.21+-00ADD8?style=flat&logo=go&logoColor=white)](https://golang.org)
-[![Status](https://img.shields.io/badge/Stage-Phase%201%20%2F%20Active%20Research-blue?style=flat)]()
+[![Research Status](https://img.shields.io/badge/Research-In%20Active%20Development-yellow?style=flat)]()
 [![Simulation](https://img.shields.io/badge/Modeling-Google%20Colab%20%2F%20Python-orange?style=flat)]()
 [![Security](https://img.shields.io/badge/Crypto-Ed25519%20%7C%20Domain--Separated-success?style=flat)]()
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-> 📖 **Research Publication:** [Probabilistic Fast Finality: Reducing BFT Latency by Up to 46% in the Common Case](https://medium.com/@abdullahiabbaahmad39/probabilistic-fast-finality-reducing-bft-latency-by-up-to-46-in-the-common-case-04895ded843a)
+> 🔬 **Research in Development:** This protocol specification, analytical modeling, and distributed prototype are under active research and development.
+>
+> 📖 **Companion Publication:** [Probabilistic Fast Finality: Reducing BFT Latency by Up to 46% in the Common Case](https://medium.com/@abdullahiabbaahmad39/probabilistic-fast-finality-reducing-bft-latency-by-up-to-46-in-the-common-case-04895ded843a)
 
 </div>
 
